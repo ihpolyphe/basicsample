@@ -1,10 +1,23 @@
-import Vue from 'vue'
-import App from './App.vue'
-import vuetify from './plugins/vuetify'
+import Vue from "vue";
+import App from "./App.vue";
+import vuetify from "./plugins/vuetify";
+import router from "./router.js";
+import axios from "axios";
+import store from "@/store";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+Vue.use({
+  install(Vue) {
+    Vue.prototype.$axios = axios.create({
+      baseURL: "http://localhost:3000/",
+    });
+  },
+});
 
 new Vue({
   vuetify,
-  render: h => h(App)
-}).$mount('#app')
+  router,
+  store,
+  render: (h) => h(App),
+}).$mount("#app");
