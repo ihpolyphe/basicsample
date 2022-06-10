@@ -33,10 +33,8 @@
 </template>
 
 <script>
-import { defineComponent } from "@vue/composition-api";
-
 export default {
-  name: "Login",
+  name: "Login", // eslint-disable-line
   data() {
     return {
       showPassword: false,

@@ -2,7 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 Vue.use(Vuex);
-
+// eslint-disable-next-line
 const store = new Vuex.Store({
   state: {
     isLogin: false,
@@ -10,7 +10,7 @@ const store = new Vuex.Store({
   },
   mutations: {
     auth(state, user) {
-      state.isLogin = ture;
+      state.isLogin = true;
       state.userId = user;
     },
   },
