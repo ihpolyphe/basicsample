@@ -15,4 +15,12 @@ https://www.chuken-engineer.com/entry/2020/08/21/163721
 - vuex がインストールできない
   npm install vuex --save --legacy-peer-deps
 
-今日は backend だけ。明日以降フロントエンドがんばるお
+- vue-router 関係のワーニングが出る
+  npm install vue-router@3 で解決
+  https://laracasts.com/discuss/channels/vue/cant-not-import-vue-vuerouter-correctly
+
+-vue3 へ、vuetify を 3.0beta でインストール
+
+https://tedate.jp/vue-js/i-tried-installing-vuetify3-beta
+
+バージョンの依存関係解決できず。。。

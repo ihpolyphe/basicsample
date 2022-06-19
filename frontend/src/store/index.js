@@ -1,8 +1,8 @@
-import Vue from "vue";
+import * as Vue from "vue";
 import Vuex from "vuex";
 
 Vue.use(Vuex);
-// eslint-disable-next-line
+
 const store = new Vuex.Store({
   state: {
     isLogin: false,
@@ -21,3 +21,5 @@ const store = new Vuex.Store({
   },
   modules: {},
 });
+
+export default store;

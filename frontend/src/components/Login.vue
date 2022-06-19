@@ -2,7 +2,7 @@
   <v-app>
     <v-card width="500px" class="mx-auto mt-5">
       <v-toolbar color="primary" flat> test </v-toolbar>
-      <v-card-title> Login?? </v-card-title>
+      <v-card-title> Login? </v-card-title>
 
       <v-card-text>
         <v-form>
@@ -34,11 +34,11 @@
 
 <script>
 export default {
-  name: "Login", // eslint-disable-line
+  name: "Login",
   data() {
     return {
       showPassword: false,
-      msg: "userIDとPasswordを入力してください",
+      msg: "userIDとpasswordを入力して下さい",
       authId: "",
       authPass: "",
     };
@@ -59,7 +59,7 @@ export default {
 
       if (this.msg == "OK") {
         this.$store.dispatch("fetch", this.authId);
-        this.$router.push("Page1");
+        this.$router.push("/Page1");
       }
     },
   },

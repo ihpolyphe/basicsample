@@ -7,27 +7,32 @@ import Store from "@/store/index.js";
 
 Vue.use(Router);
 
-//export default new Router
+//export default new Router({
 const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
     //ルーティングの設定
     {
-      path: "/page1",
-      component: Page_1,
-      name: "page1",
+      path: "/page1", //ブラウザに表示されるURL
+      component: Page_1, //表示するコンポーネント
+      name: "page1", //ルートの名前を指定
       meta: {
         requiresAuth: true,
       },
     },
     {
-      path: "/page2",
+      path: "/Page2",
       component: Page_2,
       name: "page2",
       meta: {
         requiresAuth: true,
       },
+    },
+    {
+      path: "/",
+      component: Login,
+      name: "home",
     },
     {
       path: "/Login",
@@ -53,3 +58,5 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
+
+export default router;
